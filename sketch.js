@@ -1,19 +1,27 @@
 
 function setup(){
     console.log("setup");
-    
-    createCanvas(300,300);
+
+    createCanvas(200,200);
+ background(125);
+
 
 }
-
-
 function draw(){
+console.log("draw");
+clear();
+ellipse(mouseX,mouseY,50,50);
+if((mouseX<100)&&(mouseY<100)){
+    fill(color('red'))
+}else
+    if((mouseX>100)&&(mouseY<100)){
+    fill(color('blue'))
+}else
+if((mouseX>100)&&(mouseY>100)){
+    fill(color('green'))
+}else
+if((mouseX<100)&&(mouseY>100)){
+    fill(color('yellow'))
+}
 
-    console.log("draw");
-    
-      var red=random(0,255)
-       var green=random(0,255)
-       var blue=random(0,255)
-       background(red,green,blue);
-       rect(150,150,80,80);
 }
